@@ -1,0 +1,260 @@
+html {
+  /* 영문이면 roboto가 적용되고, 한글이면 Noto Sans KR가 적용되도록 아래와 같은 순서로 배치 */
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+}
+
+/* 노말라이즈 */
+body, ul, li, h1 {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+label[for] {
+  cursor:pointer;
+  user-select:none;
+}
+
+/* 라이브러리 */
+.border-red {
+  border:4px solid red;
+}
+
+.border-pink {
+  border:4px solid pink;
+}
+
+.border-blue {
+  border:4px solid blue;
+}
+
+.border-green {
+  border:4px solid green;
+}
+
+.border-black {
+  border:4px solid black;
+}
+
+.border-gold {
+  border:4px solid gold;
+}
+
+.flex {
+  display:flex;
+}
+
+.flex-jc-e {
+  justify-content:flex-end;
+}
+
+.flex-jc-s {
+  justify-content:flex-start;
+}
+
+.flex-jc-c {
+  justify-content:center;
+}
+
+.flex-jc-sb {
+  justify-content:space-between;
+}
+
+.flex-ai-c {
+  align-items:center;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.height-100p {
+  height:100%;
+}
+
+.block {
+  display:block;
+}
+
+.con {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* cos */
+.con {
+    width: 1080px; 
+}
+
+.con-min-width {
+    min-width: 1080px; 
+}
+
+/* 대출박스 시작 */
+.loan-box {
+    background-color: #333b58;
+    position: relative;
+    color: white;
+    /* 임시 */
+    height: 500px;
+    margin-top: 1000px;
+}
+
+.loan-box > .con {
+    position: relative;
+    z-index: 1;
+}
+
+.loan-box > .sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.loan-box > .sky > .blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #559cde;
+    transition: height .5s;
+}
+
+.loan-box.active > .sky > .blue {
+    height: 0;
+}
+
+.loan-box > .sky > .moon {
+    width: 112px;
+    height: 112px;
+    position: absolute;
+    top: 120px;
+    left: calc(50% + 300px);
+    overflow: hidden;
+}
+
+.loan-box.active > .sky > .moon > .base {
+    background-color: white;
+}
+
+.loan-box > .sky > .moon > .base {
+    width: 110px;
+    height: 110px;
+    background-color: #ffdc00;
+    border-radius: 50%;
+    transition: background-color 1s;
+}
+
+.loan-box > .sky > .moon > .shadow {
+    width: 100%;
+    height: 100%;
+    background-color: #333b58;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    border-radius: 50%;
+    transition: top .5s .3s, left .5s .3s;
+}
+
+.loan-box.active > .sky > .moon > .shadow {
+    top: -25%;
+    left: -25%;
+}
+
+/* 대출박스 - 별 시작 */
+.loan-box > .sky .ico-star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.loan-box > .sky .ico-star-1 {
+  top: 30%;
+  left: 10%;
+}
+
+.loan-box > .sky .ico-star-2 {
+  top: 10%;
+  left: 20%;
+}
+
+.loan-box > .sky .ico-star-3 {
+  top: 25%;
+  left: 15%;
+}
+
+.loan-box > .sky .ico-star-4 {
+  top: 40%;
+  right: 15%;
+}
+
+.loan-box > .sky .ico-star-5 {
+  top: 43%;
+  right: 30%;
+}
+
+.loan-box > .sky .ico-star-6 {
+  top: 73%;
+  right: 27%;
+}
+
+.loan-box > .sky .ico-star-7 {
+  top: 65%;
+  left: 22%;
+}
+
+@keyframes clittering {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.loan-box > .sky .ico-star-1 {
+  animation: clittering 2s infinite;
+}
+
+.loan-box > .sky .ico-star-2 {
+  animation: clittering 3s infinite;
+}
+
+.loan-box > .sky .ico-star-3 {
+  animation: clittering 5s infinite;
+}
+
+.loan-box > .sky .ico-star-4 {
+  animation: clittering 2s infinite;
+}
+
+.loan-box > .sky .ico-star-5 {
+  animation: clittering 4s infinite;
+}
+
+.loan-box > .sky .ico-star-6 {
+  animation: clittering 1.8s infinite;
+}
+
+.loan-box > .sky .ico-star-7 {
+  animation: clittering 3.5s infinite;
+}
+/* 대출박스 - 별 끝 */
+
+/* 대출박스 끝 */
